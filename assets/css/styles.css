@@ -1,0 +1,6 @@
+/* note: need to change this to scss and build in scripts for an scss compile task in package.json when we can */
+/* namespacing: start all class/ID names with ps- to namespace our styles */
+
+.ps-nav .ps-profile-link {
+	padding-right:  20px;
+}
