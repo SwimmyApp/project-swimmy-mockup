@@ -1,3 +1,8 @@
+# Project Swimmy Mockup
+
+See prototype kick-off document here: https://docs.google.com/document/d/1sOWH_MXyaKAorE015E9fBT5P1q6rGTOhVw5-MFgwC94/edit?usp=sharing
+
+
 mobx-react-boilerplate
 =====================
 
