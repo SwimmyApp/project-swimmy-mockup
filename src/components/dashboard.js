@@ -9,7 +9,7 @@ import DevTool from 'mobx-react-devtools';
 @observer
 export default class Dashboard extends React.Component {
 	render() {
-		const {userStore} = this.props;
+		const {rootStore} = this.props;
 
 		return (
 			<div>
@@ -24,10 +24,10 @@ export default class Dashboard extends React.Component {
 				</ul>
 				<div className="tab-content">
 					<div role="tabpanel" className="tab-pane active" id="events">
-						<EventsList></EventsList>
+						<EventsList rootStore={rootStore}></EventsList>
 					</div>
-					<div role="tabpanel" className="tab-pane active" id="groups">
-						<GroupsList></GroupsList>
+					<div role="tabpanel" className="tab-pane" id="groups">
+						<GroupsList rootStore={rootStore}></GroupsList>
 					</div>
 				</div>
 			</div>

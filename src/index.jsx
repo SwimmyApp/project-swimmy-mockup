@@ -1,14 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import UserStore from './stores/UserStore';
+import RootStore from './stores/RootStore';
 import App from './App';
 
-const userStore = new UserStore();
+const rootStore = new RootStore();
+//TODO: do we need a UI store? see: https://mobx.js.org/best/store.html
 
 render(
   <AppContainer>
-    <App userStore={userStore} />
+    <App rootStore={rootStore} />
   </AppContainer>,
   document.getElementById('root')
 );
@@ -19,7 +20,7 @@ if (module.hot) {
 
     render(
       <AppContainer>
-        <NextApp userStore={userStore} />
+        <NextApp rootStore={rootStore} />
       </AppContainer>,
       document.getElementById('root')
     );

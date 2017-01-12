@@ -4,3 +4,11 @@
 .ps-nav .ps-profile-link {
 	padding-right:  20px;
 }
+
+.form-inline .form-group {
+	padding-right:  20px;
+}
+
+.form-inline input {
+	margin-left:  10px;
+}

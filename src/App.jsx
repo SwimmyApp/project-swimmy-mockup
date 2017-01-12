@@ -10,12 +10,12 @@ import DevTools from 'mobx-react-devtools';
 class App extends Component {
 
   render() {
-    const {userStore} = this.props;
+    const {rootStore} = this.props;
 
     return (
       <main className="container-fluid">
-        <BannerNav userStore={userStore}></BannerNav>
-        <Dashboard userStore={userStore}></Dashboard>
+      <BannerNav rootStore={rootStore}></BannerNav>
+        <Dashboard rootStore={rootStore}></Dashboard>
       </main>
     );
   }

@@ -6,6 +6,8 @@ import DevTool from 'mobx-react-devtools';
 @observer
 export default class EventsList extends React.Component {
 	render() {
+		const {rootStore} = this.props;
+		
 		return (
 			<div>
 				<h2>Events</h2>
