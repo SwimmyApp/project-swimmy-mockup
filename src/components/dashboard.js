@@ -14,14 +14,27 @@ export default class Dashboard extends React.Component {
 		return (
 			<div>
 				<h1>Dashboard</h1>
-				<ul className="nav nav-tabs" id="ps-dashboard-tabs" role="tablist">
-					<li role="presentation" className="active">
-						<a href="#events" aria-controls="events" role="tab" data-toggle="tab">Events</a>
-					</li>
-					<li role="presentation">
-						<a href="#groups" aria-controls="groups" role="tab" data-toggle="tab">Groups</a>
-					</li>
-				</ul>
+				<hr />
+				<div className="tabs tabs-style-flip">
+					<nav>
+						<ul className="nav nav-tabs" id="ps-dashboard-tabs" role="tablist">
+							<li role="presentation" className="active">
+								<a href="#events" aria-controls="events" role="tab" data-toggle="tab">
+									<span className="tab-title">
+										<span className="fa fa-calendar" aria-hidden="true"></span> <span className="tab-text">Events</span>
+									</span>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#groups" aria-controls="groups" role="tab" data-toggle="tab">
+									<span className="tab-title">
+										<span className="fa fa-group" aria-hidden="true"></span> <span className="tab-text">Groups</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 				<div className="tab-content">
 					<div role="tabpanel" className="tab-pane active" id="events">
 						<EventsList rootStore={rootStore}></EventsList>

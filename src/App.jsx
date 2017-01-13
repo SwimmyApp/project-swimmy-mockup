@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <main className="container-fluid">
-      <BannerNav rootStore={rootStore}></BannerNav>
+        <BannerNav rootStore={rootStore}></BannerNav>
         <Dashboard rootStore={rootStore}></Dashboard>
       </main>
     );

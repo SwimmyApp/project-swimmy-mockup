@@ -16,11 +16,11 @@ export default class UserStore {
 		//memberships to groups rather than going through each and every member of each and every group
 		//to see if the user is a member; that would be very expensive computationally.
 		//For the moment, I'm not making a membership store, but it may be necessary in the future.
-		let user = [
+		let user = {
 			'id': 1,
 			'name': 'Jane Doe',
 			'zipcode': '47401'
-		];
+		};
 		let memberships = [
 			{
 				'id': 1,
@@ -29,7 +29,6 @@ export default class UserStore {
 				'role': 'Owner'
 			}
 		];
-
 		this.user = new UserModel(this, user.id, user.name, user.zipcode);
 		memberships.map((membership) => {
 			this.memberships.push(new MembershipModel(this, membership.id, membership.user_id, membership.group_id, membership.role));

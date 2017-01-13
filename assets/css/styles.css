@@ -20,3 +20,205 @@
 .ps-find-groups-btn {
 	margin:  10px;
 }
+
+/* M. Mallon: a bunch of styles for the dashboard tabs I ganked from another project! */
+
+.tabs-style-flip {
+	max-width: 1200px;
+}
+
+.tabs-style-flip nav a {
+	padding: 0.5em 0;
+	color: #2CC185;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.tabs-style-flip nav a:hover,
+.tabs-style-flip nav a:focus,
+.tabs-style-flip nav li.active a {
+	color: #74777b;
+}
+
+.tabs-style-flip nav a span {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 0.625em;
+}
+
+.tabs-style-flip nav a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+	transition: transform 0.3s, background-color 0.3s;
+	-webkit-transform: perspective(900px) rotate3d(1,0,0,90deg);
+	transform: perspective(900px) rotate3d(1,0,0,90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-perspective-origin: 50% 100%;
+	perspective-origin: 50% 100%;
+}
+
+.tabs-style-flip nav li.active a::after {
+	background-color: #fff;
+	-webkit-transform: perspective(900px) rotate3d(1,0,0,0deg);
+	transform: perspective(900px) rotate3d(1,0,0,0deg);
+}
+
+.tabs-style-flip .content-wrap {
+	background: #fff;
+}
+
+/* tabs */
+
+.tabs {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.25em;
+}
+
+/* nav */
+.tabs nav {
+	text-align: center;
+}
+
+.tabs nav ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1200px;
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.tabs nav ul li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+    /* for tab shape */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 10px;
+}
+
+.tabs nav a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+.tabs nav a span {
+	vertical-align: middle;
+	font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+	color: #74777b;
+}
+
+.tabs nav a:focus {
+	outline: none;
+}
+
+/* Content */
+.content-wrap {
+	position: relative;
+}
+
+.content-wrap section {
+	display: none;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 1200px;
+	text-align: center;
+}
+
+.content-wrap section.content-current {
+	display: block;
+}
+
+/* M. Mallon -- adjustments*/
+.tabs-style-tzoid .nav-tabs,
+.tabs-style-flip .nav-tabs {
+    border-bottom: 0px;
+}
+
+.tabs-style-flip {
+    max-width: none;
+    overflow: visible;
+}
+
+.tabs-style-flip nav ul {
+    max-width: none;
+}
+
+.tabs-style-flip nav a {
+    color: #5f7386;
+}
+
+.tabs-style-flip nav li {
+    background: #e7ecea;
+}
+
+.tabs-style-flip nav li.active {
+    background: white;
+    border-top: solid 2px #eee;
+    border-left: solid 2px #eee;
+    border-right: solid 5px #eee;
+    box-shadow: 2px -2px 5px #eee;
+}
+
+.tabs-style-flip nav li.active .tab-title {
+    border-bottom: solid 2px;
+    padding-bottom: 5px;
+    color: #337AB7;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.tabs-style-flip .nav-tabs li.active a {
+    margin-right: 0; 
+    border: none; 
+    background-color: transparent;
+}
+
+.tabs-style-flip .nav-tabs li.active:hover {
+        cursor: default; 
+        background: white;
+}
+
+.tabs-style-flip nav a span {
+    font-size: 1.1em;
+}
