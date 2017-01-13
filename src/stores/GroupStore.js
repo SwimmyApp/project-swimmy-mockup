@@ -70,16 +70,37 @@ export default class GroupStore {
 						'role': 'Member'
 					},
 				]
-			}
+			},
+			{
+			'id': 2,
+			'name': 'Bloomington IWW Chapter',
+			'description': 'Local chapter of Industrial Workers of the World, i.e., "The Wobblies." ',
+			'zipcode': '47401',
+			'issues': [
+				{
+					'id': 1,
+					'name': 'Economic justice'
+				}
+			],
+			'memberships': [
+				{
+					'id': 1,
+					'user_id': 2,
+					'group_id': 2,
+					'role': 'Owner'
+				},
+				{
+					'id': 2,
+					'user_id': 4,
+					'group_id': 2,
+					'role': 'Member'
+				}
+			]
+		}
 		];
 		this.groups = [];
 		groups.forEach((group) => {
-			//this.groups.push(new GroupModel(group));
-			//groupList.push(new GroupModel(this, group));
 			this.groups.push(new GroupModel(this, group));
-			//console.log(this.groups);
 		});
-		//console.log(this.groups);
-		//this.groups = [];
 	}
 }

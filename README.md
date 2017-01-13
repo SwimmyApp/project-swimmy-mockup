@@ -2,6 +2,8 @@
 
 See prototype kick-off document here: https://docs.google.com/document/d/1sOWH_MXyaKAorE015E9fBT5P1q6rGTOhVw5-MFgwC94/edit?usp=sharing
 
+And the dev trello board for tasks: https://trello.com/b/UeMUEmNh/swimmy-dev-board 
+
 
 mobx-react-boilerplate
 =====================
