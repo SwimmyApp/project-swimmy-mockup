@@ -4,12 +4,22 @@ import React from 'react';
 import { Route } from 'mobx-router';
 
 //components
+import SplashScreen from '../components/splashScreen';
+import LoginScreen from '../components/loginScreen';
 import Dashboard from '../components/dashboard';
 
 const views = {
-  dashboard: new Route({
+  home: new Route({
     path: '/',
+    component: <SplashScreen />
+  }),
+  dashboard: new Route({
+    path: 'dashboard',
     component: <Dashboard />
+  }),
+  login: new Route({
+    path: 'login',
+    component: <LoginScreen />
   })
 };
 export default views;

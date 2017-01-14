@@ -8,7 +8,6 @@ import DevTool from 'mobx-react-devtools';
 
 class Dashboard extends React.Component {
 	render() {
-		debugger
 		const {store} = this.props;
 		return (
 			<div>
