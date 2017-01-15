@@ -4,9 +4,9 @@ import React from 'react';
 import { Route } from 'mobx-router';
 
 //components
-import SplashScreen from '../screens/splashScreen';
-import LoginScreen from '../screens/loginScreen';
-import Dashboard from '../screens/dashboard';
+import SplashScreen from '../components/splashScreen';
+import LoginScreen from '../components/loginScreen';
+import Dashboard from '../components/dashboard';
 
 const views = {
   home: new Route({

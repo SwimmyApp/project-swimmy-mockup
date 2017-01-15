@@ -1,8 +1,8 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 
-import EventsList from '../components/eventsList';
-import GroupsList from '../components/groupsList';
+import EventsList from './eventsList';
+import GroupsList from './groupsList';
 
 import DevTool from 'mobx-react-devtools';
 

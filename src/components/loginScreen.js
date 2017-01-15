@@ -1,7 +1,6 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import views from '../config/views';
-import styles from './styles/loginScreen.css';
 
 class LoginScreen extends React.Component {
   handleOnSubmit(e) {
@@ -15,14 +14,11 @@ class LoginScreen extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleOnSubmit.bind(this)} method='post'>
-        <div className='form-group'>
-          <input className={styles.input} type='text' name='email' placeholder='Email'/>
-        </div>
-
-        <div className='form-group'>
-          <input className={styles.input}  type='password' name='password' placeholder='Password'/>
-          <input className={styles.buttons} type='submit' value='Sign In' />
-        </div>
+        <label name='email'>Email</label>
+        <input type='text' name='email'/>
+        <label name='email'>Password</label>
+        <input type='password' name='password'/>
+        <input type='submit' />
       </form>
     )
   }

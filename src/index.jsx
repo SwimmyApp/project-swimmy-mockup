@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import RootStore from './stores/RootStore';
+import App from './App';
 
 import {Provider} from 'mobx-react';
 import {MobxRouter, startRouter} from 'mobx-router';
