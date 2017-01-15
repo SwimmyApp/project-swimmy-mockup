@@ -6,11 +6,9 @@ import GroupsList from './groupsList';
 
 import DevTool from 'mobx-react-devtools';
 
-@observer
-export default class Dashboard extends React.Component {
+class Dashboard extends React.Component {
 	render() {
-		const {rootStore} = this.props;
-
+		const {store} = this.props;
 		return (
 			<div>
 				<h1>Dashboard</h1>
@@ -37,10 +35,10 @@ export default class Dashboard extends React.Component {
 				</div>
 				<div className="tab-content">
 					<div role="tabpanel" className="tab-pane active" id="events">
-						<EventsList rootStore={rootStore}></EventsList>
+						<EventsList rootStore={store}></EventsList>
 					</div>
 					<div role="tabpanel" className="tab-pane" id="groups">
-						<GroupsList rootStore={rootStore}></GroupsList>
+						<GroupsList rootStore={store}></GroupsList>
 					</div>
 				</div>
 			</div>
@@ -50,7 +48,7 @@ export default class Dashboard extends React.Component {
 	componentDidMount() {
 		//init bootstrap tabs; ideally, we would use a library like react-bootstrap, but like everything
 		//great, they are still under active development for a 1.0 release and the current library is
-		//not accessible. however, they are very concerned with accessibility when the release is done. 
+		//not accessible. however, they are very concerned with accessibility when the release is done.
 		//let's check them out again over the coming months to see if we could use the library.
 		//for now, even though putting jquery here isn't ideal, it at least makes it accessible.
 
@@ -60,3 +58,5 @@ export default class Dashboard extends React.Component {
 		});
 	}
 }
+
+export default observer(['store'], Dashboard)
