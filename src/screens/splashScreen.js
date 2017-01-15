@@ -1,7 +1,7 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import views from '../config/views';
-import NavigationBar from '../components/appWrapper'
+import AppWrapper from '../components/appWrapper'
 import styles from './styles/splashScreenStyles.css';
 
 class SplashScreen extends React.Component {
@@ -10,8 +10,7 @@ class SplashScreen extends React.Component {
     const {router: {goTo}} = store;
 
     return (
-      <NavigationBar title='Swimmy'>
-
+      <AppWrapper title='Swimmy'>
         <div className={styles.logoPlaceholder}>
           <p>Logo Placeholder</p>
         </div>
@@ -28,7 +27,7 @@ class SplashScreen extends React.Component {
         <div>
           <p>Already have an account? <a href='#' onClick={() => {goTo(views.login)}}>Sign in</a></p>
         </div>
-      </NavigationBar>
+      </AppWrapper>
     )
   }
 }

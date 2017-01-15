@@ -6,13 +6,14 @@ class AppWrapper extends React.Component {
     window.history.back()
   }
   render () {
+    const { backButton, children, title} = this.props
     return (
       <div className={styles.container}>
         <header>
-          <button onClick={this.goBack.bind(this)}>back</button>
-          <h1 className={styles.titleText}>{this.props.title}</h1>
+          {backButton ? <button onClick={this.goBack.bind(this)}>back</button> : ''}
+          <h1 className={styles.titleText}>{title}</h1>
         </header>
-        {this.props.children}
+        {children}
       </div>
     )
   }
@@ -26,4 +27,7 @@ AppWrapper.propTypes = {
   backButton: bool
 };
 
+AppWrapper.defaultProps = {
+  backButton: false
+}
 export default AppWrapper;

@@ -7,6 +7,7 @@ import { Route } from 'mobx-router';
 import SplashScreen from '../screens/splashScreen';
 import LoginScreen from '../screens/loginScreen';
 import Dashboard from '../screens/dashboard';
+import IssuesScreen from '../screens/issuesScreen';
 
 const views = {
   home: new Route({
@@ -20,6 +21,11 @@ const views = {
   login: new Route({
     path: 'login',
     component: <LoginScreen />
+  }),
+  issues: new Route({
+    path: 'issues',
+    component: <IssuesScreen />
   })
 };
+
 export default views;

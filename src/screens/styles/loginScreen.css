@@ -1,3 +1,7 @@
+.container {
+  padding: 0 20px;
+}
+
 .input {
   composes: input from "../../shared/styles/buttonStyles.css"
 }
