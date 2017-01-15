@@ -17,7 +17,7 @@ export default class GroupSearch extends React.Component {
 
 		return (
 			<div>
-				<h3>Search groups</h3>
+				<h3>Search groups</h3> 
 				<div className="panel panel-default">
 					<div className="panel-body">
 						<form className="form-inline">
