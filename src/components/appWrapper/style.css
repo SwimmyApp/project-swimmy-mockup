@@ -1,0 +1,11 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.titleText {
+  composes: normalText from "../../shared/styles/fontStyles.css";
+  padding: 18px;
+  text-align: center;
+  margin: 0;
+}

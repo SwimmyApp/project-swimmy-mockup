@@ -1,0 +1,28 @@
+.btn {
+  background: black;
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 4px;
+  margin: 20px 0 0;
+  color: white;
+  opacity: .8;
+  transition: all 0.5s ease;
+}
+
+.input {
+  background: #F1F1F1;
+  width: 100%;
+  padding: 14px;
+  border-radius: 4px;
+  margin: 20px 0;
+  color: white;
+  opacity: .8;
+  transition: all 0.5s ease;
+  border: 0;
+  font-size: 14px;
+  outline: none;
+  color: #3E3E3E;
+  font-weight: 700;
+}
