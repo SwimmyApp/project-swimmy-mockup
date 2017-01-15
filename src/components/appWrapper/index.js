@@ -6,7 +6,7 @@ class AppWrapper extends React.Component {
     return (
       <div className={styles.container}>
         <header>
-          <button onClick={}>back</button>
+          <button>back</button>
           <h1 className={styles.titleText}>{this.props.title}</h1>
         </header>
         {this.props.children}
