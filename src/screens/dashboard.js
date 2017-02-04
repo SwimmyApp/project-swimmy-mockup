@@ -7,9 +7,9 @@ import GroupsList from '../components/groupsList';
 import DevTool from 'mobx-react-devtools';
 
 class Dashboard extends React.Component {
-	render() {
-		const {store} = this.props;
-		return (
+  render() {
+    const {store} = this.props;
+    return (
 			<div>
 				<h1>Dashboard</h1>
 				<hr />
@@ -42,21 +42,21 @@ class Dashboard extends React.Component {
 					</div>
 				</div>
 			</div>
-		);
-	}
+    );
+  }
 
-	componentDidMount() {
+  componentDidMount() {
 		//init bootstrap tabs; ideally, we would use a library like react-bootstrap, but like everything
 		//great, they are still under active development for a 1.0 release and the current library is
 		//not accessible. however, they are very concerned with accessibility when the release is done.
 		//let's check them out again over the coming months to see if we could use the library.
 		//for now, even though putting jquery here isn't ideal, it at least makes it accessible.
 
-		$('#ps-dashboard-tabs a').click(function (e) {
-		  e.preventDefault()
-		  $(this).tab('show')
-		});
-	}
+    $('#ps-dashboard-tabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    });
+  }
 }
 
 export default observer(['store'], Dashboard)
