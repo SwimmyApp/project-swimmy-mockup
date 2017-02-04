@@ -9,9 +9,9 @@ import GroupStore from './GroupStore';
 
 
 export default class RootStore {
-	constructor() {
-		this.userStore = new UserStore({ root: this});
-		this.groupStore = new GroupStore({ root: this});
-		this.router = new RouterStore({ root: this });
-	}
+  constructor() {
+    this.userStore = new UserStore({ root: this});
+    this.groupStore = new GroupStore({ root: this});
+    this.router = new RouterStore({ root: this });
+  }
 }
