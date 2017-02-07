@@ -9,26 +9,26 @@ import DevTool from 'mobx-react-devtools';
 @observer
 export default class GroupsList extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			searchVisible: false
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchVisible: false
+    };
+  }
 
-	render() {
-		const {rootStore} = this.props;
-		let view;
+  render() {
+    const {rootStore} = this.props;
+    let view;
 
-		if (!this.state.searchVisible) {
-			view = (
+    if (!this.state.searchVisible) {
+      view = (
 				<div>
 					<YourGroups rootStore={rootStore}></YourGroups>
 				</div>
 			);
-		}
-		else {
-			view = (
+    }
+    else {
+      view = (
 				<div>
 					<div className="form-group">
 						<button className="btn btn-primary btn-sm ps-group-back-btn" onClick={this.toggleSearch.bind(this)}>
@@ -38,9 +38,9 @@ export default class GroupsList extends React.Component {
 					<GroupSearch rootStore={rootStore}></GroupSearch>
 				</div>
 			);
-		}
+    }
 
-		return (
+    return (
 			<div>
 				<div className="row">
 					<div className="col-xs-8">
@@ -56,25 +56,25 @@ export default class GroupsList extends React.Component {
 					</div>
 				</div>
 			</div>
-		);
-	}
+    );
+  }
 
-	renderSearchButton = () => {
-		if (!this.state.searchVisible) {
-			return (
+  renderSearchButton = () => {
+    if (!this.state.searchVisible) {
+      return (
 				<div className="form-group">
 					<button className="btn btn-primary btn-lg ps-find-groups-btn" onClick={this.toggleSearch.bind(this)}>
 						<span className="fa fa-search" aria-hidden="true"></span> Find groups
 					</button>
 				</div>
-			);
-		}
-	}
+      );
+    }
+  }
 
-	toggleSearch = () => {
-		let searchVisible = !this.state.searchVisible;
-		this.setState({
-			searchVisible: searchVisible
-		});
-	}
+  toggleSearch = () => {
+    let searchVisible = !this.state.searchVisible;
+    this.setState({
+      searchVisible: searchVisible
+    });
+  }
 }

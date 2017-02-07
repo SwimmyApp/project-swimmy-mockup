@@ -5,12 +5,15 @@
   },
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "commonjs": true,
+    "es6": true
   },
   "parser": "babel-eslint",
   "rules": {
     "quotes": [2, "single"],
     "strict": [2, "never"],
+    "indent": [2, 2],
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/jsx-no-undef" : 2,
