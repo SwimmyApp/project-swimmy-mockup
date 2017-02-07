@@ -4,9 +4,9 @@
 }
 
 .titleText {
-  composes: normalText from "../../shared/styles/fontStyles.css";
+  composes: normalText from "../../shared/styles/fontStyles.scss";
   padding: 18px;
   text-align: center;
   margin: 0;
-  display: inline-block;;
+  display: inline-block;
 }

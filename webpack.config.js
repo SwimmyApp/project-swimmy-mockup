@@ -1,6 +1,9 @@
 var path = require('path');
 var webpack = require('webpack');
 
+//this was a really helpful guide to learning more about webpack, if you're not familiar!
+//https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783#.l3oge6i0w
+
 module.exports = {
   devtool: 'eval',
   entry: [
@@ -27,8 +30,13 @@ module.exports = {
       include: path.join(__dirname, 'src')
     },
     {
-      test: /\.css$/,
-      loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+      test: /\.scss$/,
+      loaders: [
+        'style',
+        'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        'sass-loader',
+        'postcss-loader'
+      ]
     }]
   }
 };

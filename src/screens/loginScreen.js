@@ -1,7 +1,7 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import views from '../config/views';
-import styles from './styles/loginScreen.css';
+import styles from './styles/loginScreen.scss';
 import AppWrapper from '../components/appWrapper'
 
 class LoginScreen extends React.Component {

@@ -3,7 +3,7 @@
 }
 
 .titleText {
-  composes: normalText from "../../shared/styles/fontStyles.css";
+  composes: normalText from "../../shared/styles/fontStyles.scss";
   padding: 18px;
   text-align: center;
   margin: 0;
@@ -15,7 +15,7 @@
 }
 
 .buttons {
-  composes: btn from "../../shared/styles/buttonStyles.css"
+  composes: btn from "../../shared/styles/buttonStyles.scss"
 }
 
 .buttonContainer {
