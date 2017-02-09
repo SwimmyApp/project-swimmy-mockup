@@ -1,11 +1,12 @@
 .container {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .input {
-  composes: input from "../../shared/styles/buttonStyles.scss"
+  composes: input from "../../shared/styles/buttonStyles.scss";
+  margin: unset;
 }
 
 .buttons {
-  composes: btn from "../../shared/styles/buttonStyles.scss"
+  composes: btn from "../../shared/styles/buttonStyles.scss";
 }
