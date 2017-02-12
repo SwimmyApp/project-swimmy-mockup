@@ -4,12 +4,12 @@ import {observer} from 'mobx-react';
 import DevTool from 'mobx-react-devtools';
 
 @observer
-export default class IssueRow extends React.Component {
+export default class ActionIssueRow extends React.Component {
   render() {
-    const { issue } = this.props;
+    const { item } = this.props;
 
     return (
-        <li>{ issue.name }</li>
+        <li>{ item.getName() }</li>
     );
   }
 }

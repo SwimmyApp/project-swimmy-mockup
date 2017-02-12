@@ -2,7 +2,7 @@ import React from 'react';
 import {observer} from 'mobx-react';
 import views from '../config/views';
 import AppWrapper from '../components/appWrapper'
-import IssuesList from '../components/issuesList/index'
+import ActionIssueList from '../components/actionIssueList/index'
 
 class IssuesScreen extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class IssuesScreen extends React.Component {
     return (
         <AppWrapper title='Issues' backButton>
             <p>What issues affect you the most?</p>
-            <IssuesList issues={ store.issueStore.issues } />
+            <ActionIssueList items={ store.issueStore.issues } />
             <p>Other issues</p>
             <button onClick={() => {goTo(views.actions)}}>Next</button>
         </AppWrapper>
