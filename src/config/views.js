@@ -8,6 +8,7 @@ import SplashScreen from '../screens/splashScreen';
 import LoginScreen from '../screens/loginScreen';
 import Dashboard from '../screens/dashboard';
 import IssuesScreen from '../screens/issuesScreen';
+import SignupScreen from '../screens/signupScreen';
 
 const views = {
   home: new Route({
@@ -25,6 +26,10 @@ const views = {
   issues: new Route({
     path: 'issues',
     component: <IssuesScreen />
+  }),
+  signup: new Route({
+    path: 'signup',
+    component: <SignupScreen />
   })
 };
 
