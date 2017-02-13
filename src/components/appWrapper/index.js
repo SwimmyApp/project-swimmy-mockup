@@ -10,7 +10,7 @@ class AppWrapper extends React.Component {
     return (
       <div className={styles.container}>
         <header>
-          {backButton ? <button onClick={this.goBack.bind(this)}>back</button> : ''}
+          {backButton ? <button className="btn btn-link" onClick={this.goBack.bind(this)}>back</button> : ''}
           <h1 className={styles.titleText}>{title}</h1>
         </header>
         {children}
