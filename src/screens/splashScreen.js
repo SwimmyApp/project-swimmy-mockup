@@ -18,7 +18,7 @@ class SplashScreen extends React.Component {
         <div className={styles.buttonContainer}>
           <button
             className={styles.buttons}
-            onClick={() => {goTo(views.login)}}>I'm a new user</button>
+            onClick={() => {goTo(views.signup)}}>I'm a new user</button>
 
           <button
             className={styles.buttons}
