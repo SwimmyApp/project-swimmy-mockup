@@ -1,0 +1,32 @@
+$globalStyles: '../../shared/styles/globalStyles.scss';
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.backBtn {
+  composes: mutedText from $globalStyles;
+  composes: largeText from $globalStyles;
+  composes: mediumFontWeight from $globalStyles;
+  border: none;
+  background-color: white;
+
+}
+
+.backArrow {
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.backText {
+  vertical-align: middle;
+}
+
+.titleText {
+  composes: h1 from $globalStyles;
+  composes: mutedText from $globalStyles;
+  padding: 18px;
+  display: table;
+  margin: 10px auto;
+}

@@ -1,12 +1,41 @@
+$globalStyles: "../../shared/styles/globalStyles.scss";
+
 .container {
   padding: 0 30px;
 }
 
 .input {
-  composes: input from "../../shared/styles/buttonStyles.scss";
+  composes: input from $globalStyles;
   margin: unset;
 }
 
 .buttons {
-  composes: btn from "../../shared/styles/buttonStyles.scss";
+  composes: btn from $globalStyles;
+}
+
+.form {
+  composes: form from $globalStyles;
+
+  @include mq($from: mobile, $until: tablet) {
+  	margin-top: 30%; 
+  }
+}
+
+.facebook {
+	composes: btnFacebook from $globalStyles;
+	composes: btnMedium from $globalStyles;
+	composes: btnCenter from $globalStyles;
+}
+
+.footer {
+	composes: mediumFontWeight from $globalStyles;
+	composes: mutedText from $globalStyles;
+	text-align: center;
+    border-top: 1px solid $light-gray;
+    padding: 20px;
+}
+
+.submit {
+	composes: btnMedium from $globalStyles;
+	composes: btnCenter from $globalStyles;
 }

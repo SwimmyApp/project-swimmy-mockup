@@ -1,0 +1,217 @@
+/* ABOUT: */
+// -- using scss and webpack css loading
+// -- styles/variables.scss is automatically loaded so we don't have redundant @import statements 
+// -- considering react-css-modules?: https://github.com/gajus/react-css-modules
+
+/* TABLE OF CONTENTS:*/
+// -- TYPOGRAPHY
+// -- BUTTONS
+// -- FORMS
+
+//(Note from MM: the table of contents is in this order because the composes functionality requires 
+//that the style already be defined if coming from the same file. I tried working around this
+//and trying to find other workarounds online and couldn't come up with anything. Hopefully this
+//will be sustainable, otherwise, we may have to split this file into multiple files. Meh. I am
+//a little concerned that at some point the order of dependencies between multiple classes will
+//collide. But that day has not yet arrived!)
+
+/******************************************************************/
+/* TYPOGRAPHY */
+/******************************************************************/
+.app {
+	font-family: $primary-font;
+	font-weight: $font-regular-weight;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  padding: 0;
+  margin: 0;
+  line-height: 135%;
+  font-family: $primary-font;
+}
+
+.h1 {
+  font-size: $font-size-huge;
+  font-weight: $font-regular-weight;
+}
+
+.h2 {
+  font-size: $font-size-xl;
+  font-weight: $font-regular-weight;
+}
+
+.h3 {
+  font-size: $font-size-large;
+  font-weight: $font-regular-weight;
+}
+
+.h4 {
+  font-size: $font-size-normal;
+  font-weight: $font-regular-weight;
+}
+
+.h5 {
+  font-size: $font-size-small;
+  font-weight: $font-regular-weight;
+}
+
+.h6 {
+  font-size: $font-size-tiny;
+  font-weight: $font-regular-weight;
+}
+
+.hugeText {
+  font-size: $font-size-huge;
+}
+
+.extraLargeText {
+  font-size: $font-size-xl;
+}
+
+.largeText {
+  font-size: $font-size-large;
+}
+
+.normalText {
+  font-size: $font-size-normal;
+}
+
+.smallText {
+  font-size: $font-size-small;
+}
+
+.tinyText {
+  font-size: $font-size-tiny;
+}
+
+.lightFontWeight {
+	font-weight: $font-light-weight;
+}
+
+.regularFontWeight {
+	font-weight: $font-regular-weight;
+}
+
+.mediumFontWeight {
+	font-weight: $font-medium-weight;
+}
+
+.boldFontWeight {
+	font-weight: $font-bold-weight;
+}
+
+.mutedText {
+	color: $muted-gray;
+}
+
+.highlightText {
+	color: $electric-blue;
+}
+
+.accentText {
+	color: $pimento-red;
+}
+
+/******************************************************************/
+/* BUTTONS */
+/******************************************************************/
+
+.btn {
+  background-color: black;
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 14px;
+  border-radius: 4px;
+  margin: 20px 0 0;
+  opacity: .8;
+  transition: all 0.5s ease;
+}
+
+.btnSmall {
+	composes: btn;
+	composes: mediumFontWeight;
+	composes: smallText;
+}
+
+.btnMedium {
+	composes: btn;
+	composes: mediumFontWeight;
+	composes: largeText;
+
+  @include mq($from: mobile, $until: desktop) {
+  	width: 100%;
+  }
+
+  @include mq($from: tablet, $until: desktop) {
+  	width: 75%;
+  }
+
+  @include mq($from: desktop) {
+  	width: 500px;
+  	display: block;
+  }
+}
+
+.btnLarge {
+	composes: btn;
+	composes: mediumFontWeight;
+	composes: extraLargeText;
+
+  @include mq($from: mobile, $until: tablet) {
+  	width: 100%;
+  }
+
+  @include mq($from: tablet, $until: desktop) {
+  	width: 75%;
+  }
+
+  @include mq($from: desktop) {
+  	width: 700px;
+  	display: block;
+  }
+}
+
+.btnCenter {
+	display: table;
+	margin: 10px auto;
+}
+
+.btnFacebook {
+	color: white;
+	background-color: $sky-blue;
+}
+
+/******************************************************************/
+/* FORMS */
+/******************************************************************/
+
+.form {
+	text-align: center;
+}
+
+.input {
+  background-color: $barely-gray;
+  padding: 14px;
+  border-radius: 4px;
+  margin: 20px 0;
+  opacity: .8;
+  transition: all 0.5s ease;
+  border: 0;
+  font-size: 14px;
+  outline: none;
+  color: $lead-gray;
+  font-weight: $font-bold-weight;
+
+  @include mq($from: mobile, $until: tablet) {
+  	width: 100%;
+  }
+
+  @include mq($from: tablet, $until: desktop) {
+  	width: 75%;
+  }
+
+  @include mq($from: desktop) {
+	width: 500px;
+  }
+}

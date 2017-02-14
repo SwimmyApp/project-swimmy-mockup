@@ -38,5 +38,11 @@ module.exports = {
         'postcss-loader'
       ]
     }]
+  },
+  sassLoader: {
+    data: '@import "_variables"; @import "_mq"; ',
+    includePaths: [
+      path.resolve(__dirname, "./src/shared/styles")
+    ]
   }
 };
