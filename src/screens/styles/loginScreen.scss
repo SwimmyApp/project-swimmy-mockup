@@ -24,14 +24,20 @@ $globalStyles: "../../shared/styles/globalStyles.scss";
 .facebook {
 	composes: btnFacebook from $globalStyles;
 	composes: btnMedium from $globalStyles;
-	composes: btnCenter from $globalStyles;
-}
 
-.footer {
-	composes: footer from $globalStyles;
+	@include mq($from: desktop) {
+  	  composes: btnCenter from $globalStyles; 
+    }
 }
 
 .submit {
 	composes: btnMedium from $globalStyles;
-	composes: btnCenter from $globalStyles;
+
+	@include mq($from: desktop) {
+  	  composes: btnCenter from $globalStyles; 
+    }
+}
+
+.footer {
+	composes: footer from $globalStyles;
 }

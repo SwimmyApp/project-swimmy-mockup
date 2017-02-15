@@ -3,7 +3,7 @@ import {observable} from 'mobx';
 export default class IssueModel {
   store;
   issue_id;
-	name;
+  name;
 
   constructor(store, {issue_id, name}) {
     this.store = store;

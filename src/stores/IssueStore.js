@@ -29,7 +29,7 @@ export default class IssueStore {
       },
       {
         issue_id: 6,
-        name: "Women's rights"
+        name: 'Women\'s rights'
       }
     ];
 

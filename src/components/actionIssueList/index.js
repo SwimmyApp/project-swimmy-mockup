@@ -12,7 +12,7 @@ export default class ActionIssueList extends React.Component {
     return (
         <ul>
             { items.map(function(item) {
-                return <ActionIssueRow key={ item.getId() } item={ item } />;
+              return <ActionIssueRow key={ item.getId() } item={ item } />;
             }) }
         </ul>
     );
