@@ -28,11 +28,7 @@ $globalStyles: "../../shared/styles/globalStyles.scss";
 }
 
 .footer {
-	composes: mediumFontWeight from $globalStyles;
-	composes: mutedText from $globalStyles;
-	text-align: center;
-    border-top: 1px solid $light-gray;
-    padding: 20px;
+	composes: footer from $globalStyles;
 }
 
 .submit {

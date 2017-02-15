@@ -1,14 +1,19 @@
 /* ABOUT: */
-// -- using scss and webpack css loading
-// -- styles/variables.scss is automatically loaded so we don't have redundant @import statements 
-// -- considering react-css-modules?: https://github.com/gajus/react-css-modules
+// -- using scss and webpack css loading, with composable classes
+// -- styles/_variables.scss is automatically loaded so we don't have redundant @import statements 
+// -- styles_mq.scss is automatically loaded for ease of media queries 
+//     -- more info on mq: https://github.com/sass-mq/sass-mq
+// -- if a react component has its own scss file for specific styling, the styles in that file should
+//    be composed of styles from this global file; if no specific styles are needed, then this global
+//    file can be imported directly as 'styles' in the react component js file.
 
 /* TABLE OF CONTENTS:*/
 // -- TYPOGRAPHY
 // -- BUTTONS
 // -- FORMS
+// -- FOOTER
 
-//(Note from MM: the table of contents is in this order because the composes functionality requires 
+//(Note from MM: the table of contents is in this order because the 'composes' functionality requires 
 //that the style already be defined if coming from the same file. I tried working around this
 //and trying to find other workarounds online and couldn't come up with anything. Hopefully this
 //will be sustainable, otherwise, we may have to split this file into multiple files. Meh. I am
@@ -214,4 +219,15 @@
   @include mq($from: desktop) {
 	width: 500px;
   }
+}
+
+/******************************************************************/
+/* FOOTER */
+/******************************************************************/
+.footer {
+	composes: mediumFontWeight;
+	composes: mutedText;
+	text-align: center;
+    border-top: 1px solid $light-gray;
+    padding: 20px;
 }

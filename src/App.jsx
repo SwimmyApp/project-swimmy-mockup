@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 
-import BannerNav from './components/bannerNav';
-import Dashboard from './screens/dashboard';
+import {Provider} from 'mobx-react';
+import {MobxRouter, startRouter} from 'mobx-router';
+import views from './config/views';
 
 import DevTools from 'mobx-react-devtools';
 
@@ -10,13 +11,13 @@ import DevTools from 'mobx-react-devtools';
 class App extends Component {
 
   render() {
-    const {rootStore} = this.props;
+    const {store} = this.props;
+    startRouter(views, store);
 
     return (
-      <main className="container-fluid">
-        <BannerNav rootStore={rootStore}></BannerNav>
-        <Dashboard rootStore={rootStore}></Dashboard>
-      </main>
+      <Provider store={store}>
+      	<MobxRouter/>
+      </Provider>
     );
   }
 };

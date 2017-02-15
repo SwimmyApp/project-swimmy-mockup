@@ -1,9 +1,11 @@
+$globalStyles: '../../shared/styles/globalStyles.scss';
+
 .splashScreen {
   color: black;
 }
 
 .titleText {
-  composes: normalText from "../../shared/styles/fontStyles.scss";
+  composes: normalText from $globalStyles;
   padding: 18px;
   text-align: center;
   margin: 0;
@@ -15,7 +17,9 @@
 }
 
 .buttons {
-  composes: btn from "../../shared/styles/buttonStyles.scss"
+  composes: btnMedium from $globalStyles;
+  display: table;
+  margin: 10px auto;
 }
 
 .buttonContainer {

@@ -3,20 +3,14 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import RootStore from './stores/RootStore';
 
-import {Provider} from 'mobx-react';
-import {MobxRouter, startRouter} from 'mobx-router';
-import views from './config/views';
-
 const store = new RootStore();
 //TODO: do we need a UI store? see: https://mobx.js.org/best/store.html
 
-startRouter(views, store)
+import App from './App';
 
 render(
-  <AppContainer store={store}>
-    <Provider store={store}>
-      <MobxRouter/>
-    </Provider>
+  <AppContainer>
+    <App store={store} />
   </AppContainer>,
   document.getElementById('root')
 );
@@ -27,7 +21,7 @@ if (module.hot) {
 
     render(
       <AppContainer>
-        <NextApp rootStore={rootStore} />
+        <NextApp store={store} />
       </AppContainer>,
       document.getElementById('root')
     );
