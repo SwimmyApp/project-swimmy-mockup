@@ -10,10 +10,10 @@ export default class GroupListItem extends React.Component {
 		//TODO: actual links in href
 
     return (
-			<a className="list-group-item" href="#">
-				<p className="lead">{group.name}</p>
-				<p><strong>Description: </strong>{group.description}</p>
-			</a>
+        <a className="list-group-item" href="#">
+            <p className="lead">{group.name}</p>
+            <p><strong>Description: </strong>{group.description}</p>
+        </a>
     );
   }
 }
