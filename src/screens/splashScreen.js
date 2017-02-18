@@ -29,7 +29,7 @@ class SplashScreen extends React.Component {
             onClick={() => {goTo(views.signup)}}>I'm a new volunteer</button>
           <button
             className={styles.buttons}
-            onClick={() => {goTo(views.orgSignup)}}>I'm an organization</button>
+            onClick={() => {goTo(views.orgSignup)}}>I'm a new organization</button>
         </div>
         <nav className={"navbar-fixed-bottom " + styles.footer}>
           <div className="container">
