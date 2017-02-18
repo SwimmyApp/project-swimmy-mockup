@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './style.scss';
+import * as styles from './style.scss';
 
 class AppWrapper extends React.Component {
   goBack() {
     window.history.back()
   }
   render () {
-    const { backButton, children, title} = this.props
+    const { backButton, children, title} = this.props;
     return (
       <div className={styles.container}>
         <header>
@@ -17,7 +17,7 @@ class AppWrapper extends React.Component {
       </div>
     )
   }
-};
+}
 
 const { bool, node, string } = React.PropTypes
 
@@ -29,5 +29,5 @@ AppWrapper.propTypes = {
 
 AppWrapper.defaultProps = {
   backButton: false
-}
+};
 export default AppWrapper;

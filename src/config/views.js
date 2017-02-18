@@ -10,6 +10,7 @@ import IssuesScreen from '../screens/issuesScreen';
 import LoginScreen from '../screens/loginScreen';
 import SignupScreen from '../screens/signupScreen';
 import SplashScreen from '../screens/splashScreen';
+import OrgSignupScreen from '../screens/orgSignupScreen';
 
 const views = {
   actions: new Route({
@@ -35,6 +36,10 @@ const views = {
   signup: new Route({
     path: 'signup',
     component: <SignupScreen />
+  }),
+  orgSignup: new Route({
+    path: 'signup-org',
+    component: <OrgSignupScreen />
   })
 };
 

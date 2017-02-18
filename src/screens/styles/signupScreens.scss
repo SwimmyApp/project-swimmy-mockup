@@ -1,0 +1,13 @@
+.container {
+  padding: 0 30px;
+  margin-top: 100px;
+}
+
+.input {
+  composes: input from "../../shared/styles/buttonStyles.scss";
+  margin: unset;
+}
+
+.buttons {
+  composes: btn from "../../shared/styles/buttonStyles.scss";
+}
