@@ -17,7 +17,7 @@ const css = {
   footer: {
     textAlign: 'center',
     borderTop: '1px solid #e8e8e8',
-    padding: '20px',
+    padding: '15px',
     color: '#858585',
     fontWeight: '500'
   }
@@ -62,5 +62,3 @@ class LoginScreen extends React.Component {
   }
 }
 export default observer(['store'], LoginScreen);
-
-// TODO: Hook sign-up link to sign-up screen

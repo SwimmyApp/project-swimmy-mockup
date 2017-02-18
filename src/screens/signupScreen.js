@@ -35,7 +35,7 @@ class SignupScreen extends React.Component {
     const {store} = this.props;
     const {router: {goTo}} = store;
     return (
-      <AppWrapper title='Welcome Activist!' backButton>
+      <AppWrapper title='Welcome!' backButton>
         <div className={styles.container}>
         <form className='center-block' onSubmit={this.handleOnSubmit.bind(this)} method='post'>
           <div className='form-group'>
@@ -66,11 +66,12 @@ class SignupScreen extends React.Component {
               placeholder='Enter your phone number (Optional)'
             />
           </div>
-          <input
-            type='checkbox'
-            id='terms-conditions'
-          />
-          <label htmlFor='terms-conditions'>I agree to <a href='#' target='_blank'>terms and conditions</a></label>
+          <div className='checkbox'>
+            <label>
+              <input type='checkbox' id='terms-conditions'/>
+               I agree to <a href='#' target='_blank'>terms and conditions</a>
+            </label>
+          </div>
           <input className={styles.buttons} style={css.submit} type='submit' value='Sign Up'/>
           <input
               type='button'
