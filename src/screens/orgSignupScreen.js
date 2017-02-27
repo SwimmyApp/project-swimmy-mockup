@@ -1,3 +1,4 @@
+// Placeholder Page for Organization Signup
 import React from 'react';
 import {observer} from 'mobx-react';
 import views from '../config/views';
@@ -17,7 +18,7 @@ const css = {
   footer: {
     textAlign: 'center',
     borderTop: '1px solid #e8e8e8',
-    padding: '20px',
+    padding: '15px',
     color: '#858585',
     fontWeight: '500'
   }
@@ -42,28 +43,35 @@ class SignupScreen extends React.Component {
             <input
               className={styles.input}
               type='text'
-              placeholder='Enter your name'
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              className={styles.input}
-              type='email'
-              placeholder='Enter your email address'
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              className={styles.input}
-              type='password'
-              placeholder='Enter your Pa$$word123'
+              placeholder='Organization Name'
             />
           </div>
           <div className='form-group'>
             <input
               className={styles.input}
               type='text'
-              placeholder='Enter your phone number (Optional)'
+              placeholder='Contact Name'
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              className={styles.input}
+              type='email'
+              placeholder='Contact email address'
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              className={styles.input}
+              type='password'
+              placeholder='Enter Pa$$word123'
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              className={styles.input}
+              type='text'
+              placeholder='Enter contact phone number (Optional)'
             />
           </div>
           <div className='checkbox'>
@@ -72,7 +80,12 @@ class SignupScreen extends React.Component {
                I agree to <a href='#' target='_blank'>terms and conditions</a>
             </label>
           </div>
-          <input className={styles.buttons} style={css.submit} type='submit' value='Sign Up'/>
+          <input 
+            className={styles.buttons} 
+            style={css.submit} 
+            type='submit' 
+            value='Sign Up'
+          />
           <input
               type='button'
               className={styles.buttons}
