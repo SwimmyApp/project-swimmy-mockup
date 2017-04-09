@@ -1,51 +1,29 @@
 # Project Swimmy Mockup
 
-## Documentation
-See prototype kick-off document here: https://docs.google.com/document/d/1sOWH_MXyaKAorE015E9fBT5P1q6rGTOhVw5-MFgwC94/edit?usp=sharing
+At its core, Project Swimmy is an events search platform that connects activists with local organizing groups. More broadly, Project Swimmy exists to enable people who are confronting the need for change to collectively organize. Swimmy aims to build power in communities by bringing people together in groups and building on coalitions and intersection of issues.
 
-And the dev trello board for tasks: https://trello.com/b/UeMUEmNh/swimmy-dev-board
+See the official [Welcome! Read me first!](https://docs.google.com/document/d/1bXptxf_nos7lHOdOp-WEWSGkk7VjPxMzH8dKodZyodc/)  document for more info. Note that it needs updating.
 
-## Source control
-We are using gitflow for source control (for more info, see: http://danielkummer.github.io/git-flow-cheatsheet/). It is highly recommended that you use SourceTree to manage your git branches, because it has gitflow functionality baked into it, making it much easier to wrap your head around. 
+See the official [mockup](http://bedi.work/swimmy/) for what we want the final MVP to look like.
 
-If you are building new functionality, it must be based off of the develop branch, and NOT master! In most cases, we'll be using feature branches off of develop (i.e., when you are building a feature to search for groups). But if it's more generic in nature (i.e., when you need to add a new post-css webpack loader), these can be based directly off of develop since they are not feature-based.
+See the [Trello Swimmy Dev board](https://trello.com/b/UeMUEmNh/swimmy-dev-board) for what needs to be done.
 
-## Setup
-After you have cloned the repo and followed the instructions above for using gitflow, you can setup the app as follows:
+See the CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests.
 
-```
-npm install
-npm start
-open http://localhost:3000
-```
+## Demo
 
-## Linting
-Please use 2 spaces for indents. To make sure your code is up to snuff, simply run `npm run lint` before you make a commit.
+(2017/04/09 Geoff: This is a work in progress. It'd be nice to have a Github Pages demo based off the feature and/or master branch.)
 
-## Styling
-We are using SCSS for styling. For things like colors or font families, please create variables in src/shared/styles/variables.scss so they can be reused. We also have postcss-autoprefixer installed, so you don't have to worry about additional prefixing for older browsers. More general styles can be added in the shared/styles folder, but styles specific to individual components can be added within the component's folder and imported to that component in particular.
+## Maintainers
 
-## Production build (for non-tech team members to view)
-This is a work in progress. We can build for hosting on a server by running `webpack -p` from the root. However, I'm not sure yet what the best build process would be in terms of using /static/bundle.js as the javascript source in index.html (local development, hot-reloading) vs. using /dist/bundle.js for production. It might be a bit clunky, but maybe for now, in index.html, just manually change from /static/bundle.js to /dist/bundle.js for the js src before pushing to the server, then change it back (don't push the change to the repo). We'll need to discuss with folks who are more conversant with webpack and build processes. Grunt/gulp is another option? Not sure. We will most likely host code on either surge or github pages while we're still in the front-end prototyping phase.
+* [Geoffrey Yip](https://github.com/geoffreyyip): Took charge of the project in April 2017.
+* [Matt Mallon](https://github.com/mattmallon) *(inactive)*: Author of Project Swimmy's front end. Started in January 2017.
 
+## Contributors
 
-mobx-react-boilerplate
-=====================
+* (Work in progress)
+* (If you contributed something to the project, send me a message on ProgCode slack @geoffreyyip. I do want to add you! It'll also help me get an idea of who knows different parts of the project.)
 
-A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
-Supports ES6 and JSX compilation through babel.
+## License
 
-* For a more sophisticated project to start with, see the full TodoMVC implementation: [mobx-react-todomvc](https://github.com/mobxjs/mobx-react-todomvc).
-
-### Run the example
-
-```
-npm install
-npm start
-open http://localhost:3000
-```
-
-
-### Credits
-
-* [Mendix](http://github.com/mendix) for providing the opportunity to battle test this approach (we're hiring!).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
