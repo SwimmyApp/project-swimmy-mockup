@@ -25,7 +25,7 @@ Note that GitHub refers to the website, and that Git referes to the CLI. Github 
 
 6. Install Gitflow. Gitflow is both a branching model and a set of git extensions accessible with the command line. Cheatsheet and installation instructions are located [here](http://danielkummer.github.io/git-flow-cheatsheet/).
 
-7. Build the project. Run `npm install` to install the modules to your local repository. Run `npm start` to spin up a local dev server. Finally, open `http://localhost:3000`. Your terminal should automatically open a link in your default browser. If it doesn't, copy and paste the link into your favorite web browser.
+7. Build the project. If you don't have `npm`, install it [here](https://docs.npmjs.com/getting-started/installing-node). Run `npm install` to install the modules to your local repository. Run `npm start` to spin up a local dev server. Finally, open `http://localhost:3000`. Your terminal should automatically open a link in your default browser. If it doesn't, copy and paste the link into your favorite web browser.
 
 And that's it! You're ready to tinker around with the source code and explore the demo.
 
