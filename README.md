@@ -1,3 +1,5 @@
+(2017/04/24 Note from Geoffrey Yip: Project Swimmy is not currently in active development. There were a lot of ideas (and confusion) over what this project was supposed to be. Everyone agreed that it would be a tool to enable progressive movements, but beyond that, it was hard for me to find any consensus or clarity. To some, Project Swimmy was a centralized events repository where volunteers could find rallies and meetings near them. To others, it was a gamified platform to motivate community organizers with badges and points. Ultimately, I believe it was this confusion that caused progress to stagnate. To me, Project Swimmy was an events discovery service, that is hackable and integrate-able into other projects. Resistance-calendar is already in active development on events discovery, and I’ve decided to contribute there instead. If any developers are still following this channel, I encourage you to come join me.)
+
 # Project Swimmy Mockup
 
 At its core, Project Swimmy is an events search platform that connects activists with local organizing groups. More broadly, Project Swimmy exists to enable people who are confronting the need for change to collectively organize. Swimmy aims to build power in communities by bringing people together in groups and building on coalitions and intersection of issues.
@@ -16,7 +18,7 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) for how to get started.
 
 ## Maintainers
 
-* [Geoffrey Yip](https://github.com/geoffreyyip): Started April 2017.
+* [Geoffrey Yip](https://github.com/geoffreyyip) *(inactive)*: Started April 2017.
 * [Matt Mallon](https://github.com/mattmallon) *(inactive)*: Author of Project Swimmy's front end. Started January 2017.
 
 ## Contributors
